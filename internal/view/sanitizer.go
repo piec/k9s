@@ -111,9 +111,9 @@ func (s *Sanitizer) SetInstance(string) {}
 
 func (s *Sanitizer) bindKeys() {
 	s.Actions().Bulk(ui.KeyMap{
-		ui.KeySlash:     ui.NewSharedKeyAction("Filter Mode", s.activateCmd, false),
-		tcell.KeyEscape: ui.NewSharedKeyAction("Filter Reset", s.resetCmd, false),
-		tcell.KeyEnter:  ui.NewKeyAction("Goto", s.gotoCmd, true),
+		ui.KeySlash:    ui.NewSharedKeyAction("Filter Mode", s.activateCmd, false),
+		ui.KeyQ:        ui.NewSharedKeyAction("Filter Reset", s.resetCmd, false),
+		tcell.KeyEnter: ui.NewKeyAction("Goto", s.gotoCmd, true),
 	})
 }
 
