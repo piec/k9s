@@ -32,7 +32,7 @@ func (p *Picker) Init(ctx context.Context) error {
 	}
 
 	pickerView := app.Styles.Views().Picker
-	p.actions[tcell.KeyEscape] = ui.NewKeyAction("Back", app.PrevCmd, true)
+	p.actions[ui.KeyQ] = ui.NewKeyAction("Back", app.PrevCmd, true)
 
 	p.SetBorder(true)
 	p.SetMainTextColor(pickerView.MainColor.Color())
