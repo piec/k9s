@@ -75,9 +75,9 @@ func (h *Help) StylesChanged(s *config.Styles) {
 func (h *Help) bindKeys() {
 	h.Actions().Delete(ui.KeySpace, tcell.KeyCtrlSpace, tcell.KeyCtrlS, ui.KeySlash)
 	h.Actions().Set(ui.KeyActions{
-		tcell.KeyEscape: ui.NewKeyAction("Back", h.app.PrevCmd, true),
-		ui.KeyHelp:      ui.NewKeyAction("Back", h.app.PrevCmd, false),
-		tcell.KeyEnter:  ui.NewKeyAction("Back", h.app.PrevCmd, false),
+		ui.KeyQ:        ui.NewKeyAction("Back", h.app.PrevCmd, true),
+		ui.KeyHelp:     ui.NewKeyAction("Back", h.app.PrevCmd, false),
+		tcell.KeyEnter: ui.NewKeyAction("Back", h.app.PrevCmd, false),
 	})
 }
 

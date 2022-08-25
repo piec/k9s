@@ -114,9 +114,9 @@ func (x *Xray) SetInstance(string) {}
 
 func (x *Xray) bindKeys() {
 	x.Actions().Add(ui.KeyActions{
-		ui.KeySlash:     ui.NewSharedKeyAction("Filter Mode", x.activateCmd, false),
-		tcell.KeyEscape: ui.NewSharedKeyAction("Filter Reset", x.resetCmd, false),
-		tcell.KeyEnter:  ui.NewKeyAction("Goto", x.gotoCmd, true),
+		ui.KeySlash:    ui.NewSharedKeyAction("Filter Mode", x.activateCmd, false),
+		ui.KeyQ:        ui.NewSharedKeyAction("Filter Reset", x.resetCmd, false),
+		tcell.KeyEnter: ui.NewKeyAction("Goto", x.gotoCmd, true),
 	})
 }
 
