@@ -1,0 +1,16 @@
+if ! [ -z "$(git status --untracked-files=no --porcelain)" ]; then 
+    echo dirty
+    exit 1
+fi
+tag="$(git describe)"
+git tag -f "$tag"
+
+git push -nf
+echo "confirm?"
+read 
+git push -f
+
+echo git push piec "$tag"
+echo "confirm?"
+read 
+git push piec "$tag"
